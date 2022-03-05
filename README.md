@@ -7,19 +7,20 @@
 
 <!-- badges: end -->
 
-The `hLDA` package is a wrapper around the `HLDA` class/functions of the
-`tomotopy` `python` library. It allows to fit hierarchical topic models
-(hierarchical Latent Dirichlet Allocation) on matrix of count data where
-each row is a sample (e.g. a document) and each column is a feature
-(e.g. a word). Element `(i,j)` of the count matrix provides the number
-of time a given feature `j` was found in document `i`.
+The `hLDA` `R` package is a wrapper around the `HLDA` class/functions of
+the [`tomotopy`](https://bab2min.github.io/tomotopy/v0.12.2/en/)
+`python` library. It allows to fit hierarchical topic models
+(hierarchical Latent Dirichlet Allocation or hLDA) on matrix of count
+data where each row is a sample (e.g. a document) and each column is a
+feature (e.g. a word). Element `(i,j)` of the count matrix provides the
+number of time a given feature `j` was found in document `i`.
 
 ## Installation
 
-You can install the development version of hLDA like so:
+You can install the development version of hLDA with:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+devtools::install_github("lasy/hLDA")
 ```
 
 ## Example
@@ -30,12 +31,6 @@ example fit hLDA to random data, where no structure is expected.
 
 ``` r
 library(hLDA)
-#> Warning: replacing previous import 'dplyr::union' by 'igraph::union' when
-#> loading 'hLDA'
-#> Warning: replacing previous import 'dplyr::as_data_frame' by
-#> 'igraph::as_data_frame' when loading 'hLDA'
-#> Warning: replacing previous import 'dplyr::groups' by 'igraph::groups' when
-#> loading 'hLDA'
 
 set.seed(1)
 M <- 10 # number of samples (e.g. documents)
