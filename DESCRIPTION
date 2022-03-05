@@ -1,0 +1,37 @@
+Package: hLDA
+Type: Package
+Title: Fits hLDA Models to Count Data
+Version: 0.1.0
+Authors@R: c(
+    person("Laura","Symul", email = "lsymul@stanford.edu", role = c("aut","cre"))
+    )
+Maintainer: Laura Symul <lsymul@stanford.edu>
+Description: This package provides a minimal R interface for the HLDA class of the tomotopy python library (https://bab2min.github.io/tomotopy/v0.12.2/en/#tomotopy.HLDAModel).
+    The package provides functions to fit hierarchical LDA to count data and visualize fitted models. 
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+SystemRequirements:
+    python
+Imports: 
+    dplyr,
+    forcats,
+    ggplot2,
+    ggpubr,
+    ggraph,
+    igraph,
+    magrittr,
+    methods,
+    purrr,
+    readr,
+    reticulate,
+    stringr,
+    tibble,
+    tidyr
+Suggests: 
+    rmarkdown,
+    knitr,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+RoxygenNote: 7.1.2
+VignetteBuilder: knitr
