@@ -1,5 +1,8 @@
+#' Transform a count matrix into a corpus data.frame
+#'
 #' @import magrittr
 #' @importFrom magrittr %>%
+#' @export
 transform_count_matrix_to_corpus <-  function(data){
   if (is.null(colnames(data))) {
     warning(
