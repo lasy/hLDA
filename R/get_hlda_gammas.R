@@ -1,10 +1,12 @@
 #' @importFrom magrittr %>%
 get_hLDA_gammas <- function(hLDA_model) {
 
+  is.wholenumber <- function(x, tol = .Machine$double.eps^0.5) abs(x - round(x)) < tol
+
   d <- hLDA_model$docs
   gammas <- tibble::tibble()
   i <- 0
-  while(tryCatch(d[i]$path[1] %>% is.integer(), error = function(e) FALSE)){
+  while(tryCatch(d[i]$path[1] %>% is.wholenumber(), error = function(e) FALSE)){
     path <- d[i]$path %>% as.vector()
     topic_props <- d[i]$get_topic_dist() %>% as.vector()
     gammas <-
@@ -35,3 +37,5 @@ get_hLDA_gammas <- function(hLDA_model) {
 
   gammas
 }
+
+
